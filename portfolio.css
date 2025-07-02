@@ -406,3 +406,13 @@ textarea:focus {
     align-items: center;
     gap: 10px;
 }
+@media (max-width: 450px){
+  
+  header img {
+    height: auto;
+    width: 70%;
+    margin-bottom: 50px;
+
+  }
+
+}
