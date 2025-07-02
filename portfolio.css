@@ -139,10 +139,10 @@ header {
 }
 
 header img {
-  position: relative;
+/*   position: relative; */
   background-color: #18375e;
   border-radius: 50%;
-  height: 400px;
+  height: 25em;
   margin: 0px 0px;
   box-shadow: 3px -3px 10px var(--color-accent-electric-blue);
   z-index: 2;
