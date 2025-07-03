@@ -16,7 +16,7 @@ html {
   --color-text-primary: #E0E0E0;
   --color-text-secondary: #A0A0A0;
   --color-accent-electric-blue: #286fe9;
-  --color-accent-neon-green: #39FF14;
+  --color-accent-neon-green: #37ff14c9;
   --color-button-bg: var(--color-accent-electric-blue);
   --color-button-hover-bg: #1C5ED6;
   --color-link: var(--color-accent-electric-blue);
@@ -32,6 +32,7 @@ body {
 
 /* NAVIGATION */
 .nav {
+  
   margin-top: 20px;
   width: 100%;
   display: flex;
@@ -73,7 +74,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--color-accent-electric-blue);
+  color: var(--color-accent-electric-bluee);
 }
 nav ul li a::after{
     content: "";
@@ -133,13 +134,13 @@ header {
 }
 
 .contact-bnt:hover {
-  background-color: var(--color-link-hover);
+  background-color: var(--color-button-hover-bg);
   transform: translateY(-2px) scale(1.01);
-  box-shadow: 0px 0px 5px var(--color-button-hover-bg);
+  /* box-shadow: 0px 0px 5px var(--color-button-hover-bg); */
 }
 
 header img {
-/*   position: relative; */
+  /* position: relative; */
   background-color: #18375e;
   border-radius: 50%;
   height: 25em;
@@ -147,8 +148,6 @@ header img {
   box-shadow: 3px -3px 10px var(--color-accent-electric-blue);
   z-index: 2;
 }
-
-
 /* HERO SECTION */
 .hero {
   display: flex;
@@ -187,8 +186,11 @@ header img {
   border-radius: 10px;
   border: 2px solid var(--color-border);
   background-color: rgb(27, 27, 27);
+  transition: 500ms;
 }
-
+.logo1:hover {
+  transform: scale(1.2);
+}
 .skills .logo .logo1 img {
   height: 150px;
   padding: 10px;
@@ -197,21 +199,24 @@ header img {
 /* PROJECTS */
 .projects {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .pro {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
   border-radius: 10px;
   padding: 40px 10px;
   border: 2px solid var(--color-border);
   background-color: rgba(27, 27, 27, 0.342);
   text-align: start;
   align-items: center;
+  transition: 500ms;
 }
-
+.pro:hover{
+  transform: scale(1.1);
+}
 .pro a {
   text-decoration: none;
   color: var(--color-accent-electric-blue);
@@ -255,6 +260,10 @@ header img {
   transition: 500ms;
   height: 50px;
 }
+input:-webkit-autofill{
+    -webkit-text-fill-background: rgb(255, 255, 255) !important;
+    box-shadow: 0 0 0px 1000px var(--color-background) inset !important; 
+}
 
 .message {
   background-color: var(--color-background);
@@ -274,6 +283,7 @@ header img {
 textarea:focus {
   border: 1px solid var(--color-link-hover);
   outline: none;
+  background-color: #142b47a6;
 }
 
 /* FOOTER */
@@ -407,7 +417,7 @@ textarea:focus {
     gap: 10px;
 }
 @media (max-width: 450px){
-  
+
   header img {
     height: auto;
     width: 70%;
