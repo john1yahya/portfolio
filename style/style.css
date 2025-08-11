@@ -28,7 +28,7 @@ body {
   color: white;
   background-color: var(--color-background);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* NAVIGATION */
@@ -92,9 +92,7 @@ nav ul li a:hover::after{
     width: 100%;
     background-color: var(--color-accent-electric-blue);
 }
-.mobile-nav{
-  display: none;
-}
+
 
 /* HEADER */
 header {
@@ -319,17 +317,16 @@ textarea:focus {
     
   }
   .mobile-nav{
-    display: flex;
     flex-direction: column;
     align-items: end;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     right: 0;
     top: 0;
     width: 50%;
     background-color: var(--color-accent-electric-blue);
     transform: translateX(50vw);
-    transition-duration: 500ms;
+    transition-duration: .5s;
     color: black;
     z-index: 100;
     border-radius: 20px 0px 0px 20px ;
@@ -360,8 +357,8 @@ textarea:focus {
 }
 
  .active{
-  /* display: flex; */
   transform: translateX(0);
+  width: 100%;
  }
 
   header {
