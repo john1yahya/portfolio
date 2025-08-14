@@ -28,6 +28,8 @@ body {
   color: white;
   background-color: var(--color-background);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /* NAVIGATION */
@@ -318,16 +320,16 @@ textarea:focus {
     
   }
   .mobile-nav{
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: end;
     height: 100%;
     position: absolute;
     right: 0;
     top: 0;
-    width: 50%;
-    background-color: var(--color-accent-electric-blue);
+    width: 50vw;
     transform: translateX(50vw);
+    background-color: var(--color-accent-electric-blue);
     transition-duration: .5s;
     color: black;
     z-index: 100;
@@ -337,8 +339,7 @@ textarea:focus {
   }
   .active{
   transform: translateX(0);
-  transition-duration: 1s;
-  width: 80%;
+  /* width: 80%; */
  }
   .mobile-nav ul{
     flex-direction: column;
