@@ -92,6 +92,9 @@ nav ul li a:hover::after{
     width: 100%;
     background-color: var(--color-accent-electric-blue);
 }
+.mobile-nav{
+  display: none;
+}
 
 
 /* HEADER */
@@ -359,7 +362,7 @@ textarea:focus {
 
  .active{
   transform: translateX(0);
-  width: 100%;
+  width: 80%;
  }
 
   header {
