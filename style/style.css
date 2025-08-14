@@ -27,8 +27,7 @@ html {
 body {
   color: white;
   background-color: var(--color-background);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
 }
 
 /* NAVIGATION */
