@@ -48,7 +48,6 @@ body {
   font-style: normal;
   font-size: 30px;
 }
-
 .nav img {
   height: 50px;
 }
@@ -336,6 +335,11 @@ textarea:focus {
     justify-content: center;
     align-items: center;
   }
+  .active{
+  transform: translateX(0);
+  transition-duration: 1s;
+  width: 80%;
+ }
   .mobile-nav ul{
     flex-direction: column;
     position: inherit;
@@ -359,18 +363,15 @@ textarea:focus {
   height: 50px;
 }
 
- .active{
-  transform: translateX(0);
-  width: 80%;
- }
+ 
 
   header {
-    height: 85vh;
+    height: 100vh;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    gap: 5em;
-    margin-top: 4em;
+    gap: 3em;
+    margin-top: 2em;
   }
 
   .header-content {
