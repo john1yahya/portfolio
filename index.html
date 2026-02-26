@@ -1,138 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <meta name="description"
+        content="Yahya Hoummani — Aspiring Web Developer. Creative problem solver building clean, efficient web experiences.">
+    <title>Yahya Hoummani | Web Developer</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
 
-    <title>yahya hoummani</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
-    <!-- navigation bar -->
-   <div class="nav">
-    <h3>Yahya Homani</h3>
-    <!-- <img src="/portfolio-pics/logo.png" class="nav-logo" alt=""> -->
 
-     <nav>
+<body>
+
+    <!-- ======== NAVIGATION ======== -->
+    <div class="nav" id="Home">
+        <span class="nav-brand">Yahya H.</span>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about-me">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div style="display:flex;align-items:center;gap:10px;">
+            <!-- Theme toggle -->
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                <!-- Moon (dark mode) -->
+                <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+                </svg>
+                <!-- Sun (light mode) -->
+                <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+            </button>
+
+            <!-- Hamburger -->
+            <svg class="menu" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Open menu">
+                <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Mobile nav overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- Mobile navigation -->
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+        <img class="menu-x" id="menu-x" src="https://img.icons8.com/forma-regular-filled-sharp/24/x.png"
+            alt="Close menu">
         <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#about-me">About me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">projects</a></li>
-        </ul>
-    </nav>
-    <svg class="menu" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#fdfcfc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-   </div>
-   <nav class="mobile-nav">
-        <ul>
-            <img class="menu-x" src="https://img.icons8.com/forma-regular-filled-sharp/24/x.png">
             <li><a class="menu-element" href="#Home">Home</a></li>
-            <li><a class="menu-element" href="#about-me">About me</a></li>
+            <li><a class="menu-element" href="#about-me">About</a></li>
             <li><a class="menu-element" href="#skills">Skills</a></li>
-            <li><a class="menu-element" href="#projects">projects</a></li>
+            <li><a class="menu-element" href="#projects">Projects</a></li>
+            <li><a class="menu-element" href="#contact">Contact</a></li>
         </ul>
     </nav>
-   <!-- header -->
+
+    <!-- ======== HERO ======== -->
     <header>
-        <div class="header-content">
+        <div class="header-content reveal">
+            <div class="header-tag">Available for opportunities</div>
+
             <div class="header-h">
-                <h1>Aspiring</h1>
-                <h1>Web Developer</h1><br>
+                <h1>Aspiring<br><span>Web Developer</span></h1>
                 <h3>Creative Problem Solver</h3>
             </div>
-            <button class="contact-bnt">Contact me</button>
+
+            <div class="header-actions">
+                <a href="#contact" class="btn-primary">
+                    <!-- envelope icon -->
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    Contact me
+                </a>
+                <a href="#projects" class="btn-secondary">
+                    View work
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
         </div>
-        
-        <img src="portfolio-pics/my-pic.png" alt="my-pic">
-      
+
+        <div class="hero-image-wrapper reveal">
+            <img src="portfolio-pics/my-pic.png" alt="Yahya Hoummani profile photo">
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+            Scroll
+        </div>
     </header>
-    <!-- about-me section -->
-    <div id="about-me" class="about-section hero">
-        <h2>About me</h2>
-        <p> I am a <span>Software engeneering</span> student , and I am a passionate junior web developer eager to learn new technologies and continuously improve my skills. I love solving problems and building clean, efficient websites. Though I am at the beginning of my journey, I am committed to growing and delivering high-quality work</p>
-    </div>
-    <!-- skills section -->
-    <div id="skills" class="skills hero">
-        <h2>Skills</h2>
-        <div class="logo">
-            <div class="logo1">
-                <img src="portfolio-pics/html-logo.svg" alt="">
-            </div>
-            <div class="logo1">
-                <img src="portfolio-pics/js-logo.svg" alt="">
-            </div>
-            <div class="logo1">
-                <img src="portfolio-pics/css-logo.svg" alt="">
-            </div>
-        </div>
-    </div>
-    <!-- projets section -->
-    <div id="projects" class="projects-container hero">
-        <h2>projects</h2>
-        <div class="projects">
-            <div class="pro">
-                <h3>Project 1</h3>
-                <p>desctiption of the first project in this paragraph</p>
-                <a href="https://john1yahya.github.io/login-page/">code</a>
-            </div>
-            <div class="pro">
-                <h3>Project 2</h3>
-                <p>desctiption of the first project in this paragraph</p>
-                <a href="#">code</a>
-            </div>
-            <div class="pro">
-                <h3>Project 3</h3>
-                <p>desctiption of the first project in this paragraph</p>
-                <a href="#">code</a>
-            </div>
-        </div>
-    </div>
 
-    <div class="footer">
-             <!-- contact section -->
-        <div class="contact-container ">
-            <h2>contact</h2>
-            <form action="/">
-                <input type="text" id="name" placeholder="Name">
-                <input type="email" placeholder="email">
-                <input type="phone" placeholder="phone number" class="phone">
-                <textarea name="message" id="message" class="message" placeholder="message"></textarea>
-                <button class="bnt">Send</button>
-            </form>
+    <!-- ======== ABOUT ======== -->
+    <section id="about-me" class="section">
+        <div class="section-header reveal">
+            <span class="section-tag">Who I am</span>
+            <h2 class="section-title">About Me</h2>
+            <div class="section-divider"></div>
         </div>
 
-        <div class="links-container">
-            <h1>social media links</h1>
-            <div class="links">
-                <a href="mailto:yahya.hoummani.50@edu.uiz.ac.ma" target="_blank">
-                    <img src="portfolio-pics/email-svgrepo-com.svg" alt="" class="icon">
-                    <strong>Email </strong>
+        <div class="about-card reveal">
+            <p>
+                I am a <span class="highlight">Software Engineering</span> student, and a passionate junior web
+                developer eager to learn new technologies and continuously improve my skills.
+                I love solving problems and building clean, efficient websites. Though I am at the beginning of my
+                journey,
+                I am committed to growing and delivering high-quality work.
+            </p>
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Projects built</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1+</span>
+                    <span class="stat-label">Years learning</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Core skills</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== SKILLS ======== -->
+    <section id="skills" class="section">
+        <div class="section-header reveal">
+            <span class="section-tag">What I know</span>
+            <h2 class="section-title">Skills</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <img src="portfolio-pics/html-logo.svg" alt="HTML5 logo">
+                <span class="skill-name">HTML5</span>
+            </div>
+            <div class="skill-card reveal">
+                <img src="portfolio-pics/css-logo.svg" alt="CSS3 logo">
+                <span class="skill-name">CSS3</span>
+            </div>
+            <div class="skill-card reveal">
+                <img src="portfolio-pics/js-logo.svg" alt="JavaScript logo">
+                <span class="skill-name">JavaScript</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== PROJECTS ======== -->
+    <section id="projects" class="section">
+        <div class="section-header reveal">
+            <span class="section-tag">What I've built</span>
+            <h2 class="section-title">Projects</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <span class="project-number">01</span>
+                <h3>Login Page</h3>
+                <p>A clean, responsive login page with form validation and modern UI design. Built with HTML, CSS, and
+                    JavaScript.</p>
+                <a href="https://john1yahya.github.io/login-page/" target="_blank" class="project-link">
+                    View project
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
-            
-            <div class="links">
-                <a href="https://wa.me/212699841430" target="_blank">
-                    <img src="portfolio-pics/whatsapp-icon.svg" alt="" class="icon">
-                    <strong>whatsapp</strong>
+
+            <div class="project-card reveal">
+                <span class="project-number">02</span>
+                <h3>Project Two</h3>
+                <p>Description of the second project — coming soon. Stay tuned for more exciting work!</p>
+                <a href="#" class="project-link">
+                    Coming soon
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
-            <div class="links">
-                <a href="https://www.instagram.com/john__yaya/" target="_blank">
-                    <img src="portfolio-pics/instagram-icon.svg" alt="istagram-icon" class="icon">
-                    <strong>Instagram</strong>
-                </a>
-            </div>
-            <div class="links">
-                <a href="http://github.com/john1yahya" target="_blank">
-                    <img src="portfolio-pics/github-icon.svg" alt="istagram-icon" class="icon">
-                    <strong>Gitub</strong>
+
+            <div class="project-card reveal">
+                <span class="project-number">03</span>
+                <h3>Project Three</h3>
+                <p>Description of the third project — coming soon. Stay tuned for more exciting work!</p>
+                <a href="#" class="project-link">
+                    Coming soon
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
         </div>
-    </div>
-<script src="scripts/script.js"></script>
+    </section>
+
+    <!-- ======== FOOTER / CONTACT ======== -->
+    <footer>
+        <div class="footer-inner" id="contact">
+            <!-- Contact form -->
+            <div class="contact-section">
+                <h2>Get in touch</h2>
+                <p>Have a project in mind? Let's talk about it.</p>
+
+                <form class="contact-form" action="/">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" id="phone" placeholder="+1 234 567 8900">
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m22 2-7 20-4-9-9-4Z" />
+                            <path d="M22 2 11 13" />
+                        </svg>
+                        Send message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Social links -->
+            <div class="social-section">
+                <h2>Connect with me</h2>
+                <p>Find me on these platforms.</p>
+
+                <div class="social-links">
+                    <a href="mailto:yahya.hoummani.50@edu.uiz.ac.ma" target="_blank" class="social-link">
+                        <img src="portfolio-pics/email-svgrepo-com.svg" alt="Email icon" class="icon">
+                        <div class="social-link-info">
+                            <span class="social-link-name">Email</span>
+                            <span class="social-link-handle">yahya.hoummani.50@edu.uiz.ac.ma</span>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/212699841430" target="_blank" class="social-link">
+                        <img src="portfolio-pics/whatsapp-icon.svg" alt="WhatsApp icon" class="icon">
+                        <div class="social-link-info">
+                            <span class="social-link-name">WhatsApp</span>
+                            <span class="social-link-handle">+212 699 841 430</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/john__yaya/" target="_blank" class="social-link">
+                        <img src="portfolio-pics/instagram-icon.svg" alt="Instagram icon" class="icon">
+                        <div class="social-link-info">
+                            <span class="social-link-name">Instagram</span>
+                            <span class="social-link-handle">@john__yaya</span>
+                        </div>
+                    </a>
+
+                    <a href="http://github.com/john1yahya" target="_blank" class="social-link">
+                        <img src="portfolio-pics/github-icon.svg" alt="GitHub icon" class="icon">
+                        <div class="social-link-info">
+                            <span class="social-link-name">GitHub</span>
+                            <span class="social-link-handle">john1yahya</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            Designed & built by <span>Yahya Hoummani</span> — 2025
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
